@@ -2,40 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Correção Tabela HTML</title>
+        <title>Aula Formulário</title>
     </head>
     <body>
-        <h3>Horário Semanal</h3>
-        <table>
-            <tr>
-                <th>Horário</th>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-            </tr>
-            <tr>
-                <td>8h-9h</td>
-                <td colspan="2">Matemática</td>
-                <td>Biologia</td>
-                <td>Química</td>
-                <td>História</td>
-            </tr>
-            <tr>
-                <td>9h-10</td>
-                <td>Português</td>
-                <td>Geografia</td>
-                <td colspan="2">Física</td>
-                <td>Educação Física</td>
-            </tr>
-            <tr>
-                <td>10h-11</td>
-                <td>Artes</td>
-                <td>Filosofia</td>
-                <td>Matemática</td>
-                <td colspan="2">Inglês</td>
-            </tr>
-        </table>
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="name" name="nome" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+            <br><br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <br><br>
+            <input type="submit" value="Enviar">
+        </form>
     </body>
 </html>
