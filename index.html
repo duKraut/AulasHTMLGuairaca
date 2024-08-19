@@ -2,31 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AULA 06 - Introdução ao CSS</title>
-
-        <style>
-            h2 {
-                color:red;
-            }
-            span {
-                font-weight: bold
-            }
-        </style>
-        <!--Vinculando arquivo externo .CSS-->
-        <link rel="stylesheet" href="styles.css">
-
+        <title>Pagina de Iframe</title>
+        <link rel="stylesheet" href="styles.css"
     </head>
     <body>
-        <!--Exemplo de CSS Inline-->
-        <h1 style="color:blue">Título Azul</h1>
-        <p style="font-size: 16px;">Este é um parágrafo de 16px</p>
+        <header class="header">
+            <h1>Bem vindo à nossa Pagina</h1>
+        </header>
 
-        <!--Exemplo de CSS embed-->
-        <h2>Título em Vermelho</h2>
-        <span>Span em negrito</span>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
 
-        <!-- Exemplo de CSS com arquivo externo-->
-         <h4 class="title">Titulo com CSS Externo</h4>
-         <p id="text-primary">Texto primario</p>
+        <section class="features">
+            <h2>Introdução</h2>
+            <p>Esta é uma pagina de introdução</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeV0D70j3CgNguA0GTDkzaZAujkxbYYkyyVYeUZuwMt10lYdg/viewform?embedded=true" width="640" height="957" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Uniguairaca.
+                Todos os direitos reservados
+            </p>
+        </footer>
     </body>
 </html>
