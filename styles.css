@@ -1,23 +1,59 @@
 body {
-    background-color: gray
+    font-family: JetBrains Mono;
+    margin: 0;
+    padding: 0;
+    background-color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.relative-container {
-    position: relative;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 300px;
-    background: lightblue;
-}
-.absolute-item {
-    position: absolute;
-    top: 90px;
-    left: 50px;
-    width: 200px;
-    padding: 20px;
-    background-color: lightgreen;
+    z-index: 1000;
 }
 
-.content {
-    padding: 20px;
-    background-color: lightyellow;
+main {
+    flex: 1;
+    padding: 80px 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+.movie {
+    background-color: rgb(255, 228, 198);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.movie h2{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.movie p {
+    font-size: 15px;
+    color:chocolate;
+    padding: 0 10px 20px;
 }
