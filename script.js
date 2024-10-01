@@ -1,10 +1,10 @@
-//questão 1
+//questão 2
 
-let idade = ("Qual é a sua idade? ");
-idade = Number(idade);
+let numero = ("Qual é o número? ");
+numero = Number(numero);
 
-if (idade >= 18) {
-    console.log("Você é de maior")
+if (numero % 2 === 0) {
+    console.log("Você é par")
 } else {
-    console.log("Você é de menor")
+    console.log("Você é impar")
 }
