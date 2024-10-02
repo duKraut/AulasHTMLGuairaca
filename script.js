@@ -11,4 +11,5 @@ if (numero < 0) {
 
 } else {
     console.log("Você é positivo")
+    
 }
