@@ -1,15 +1,7 @@
-//questão 3
+//questão 4
 
-let numero = ("Qual é o número? ");
-numero = Number(numero);
+let numero = 5;
 
-if (numero < 0) {
-    console.log("Você é negativo")
-
-} if (numero = 0) {
-    console.log("Você é igual a zero")
-
-} else {
-    console.log("Você é positivo")
-    
+for (let i = 1; i <= 10; i++) {
+    console.log(`${numero} x ${i} = ${numero * i}`);
 }
