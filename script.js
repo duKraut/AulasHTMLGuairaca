@@ -1,41 +1,18 @@
-// função simples (declarativa)
-function saudacao() {
-    return console.log("olá mundo");
+function calculadora(a, b, operacao) {
+    if (operacao === 'soma') {
+        return a + b;
+    } if (operacao === 'subtracao') {
+        return a - b;
+    } if (operacao === 'multiplicacao') {
+        return a * b;
+    } if (operacao === 'divisao') {
+        return a / b;
+    } else {
+        console.log("Operação inválida")
+    }
 }
 
-// função com parâmetros
-function soma(valorA, valorB) {
-    const totalSoma = valorA + valorB;
-    return console.log(totalSoma);
-}
-
-//função anônima
-const multiplicar = function (valorA, valorB) {
-    const total = valorA * valorB;
-    return console.log(total);
-}
-
-// arrow function
-const dividir = (a, b) => a / b;
-
-// função com valor padrão de parametro
-function exponencial(base, expoente = 2) {
-    const exp = base ** expoente;
-    return console.log(exp);
-}
-
-// invocar as funções
-
-
-//funçao de callback
-function inicializarAplicacao() {
-    saudacao();
-    soma(10, 5);
-    multiplicar(5, 5);
-    exponencial(3);
-    exponencial(3, 5);
-    
-    console.log(dividir(10, 2));
-}
-
-inicializarAplicacao();
+console.log(calculadora(10, 20, 'soma'));
+console.log(calculadora(10, 20, 'subtracao'));
+console.log(calculadora(10, 20, 'multiplicação'));
+console.log(calculadora(10, 20, 'divisao'));
