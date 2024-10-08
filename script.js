@@ -1,18 +1,29 @@
-function calculadora(a, b, operacao) {
-    if (operacao === 'soma') {
-        return a + b;
-    } if (operacao === 'subtracao') {
-        return a - b;
-    } if (operacao === 'multiplicacao') {
-        return a * b;
-    } if (operacao === 'divisao') {
-        return a / b;
-    } else {
-        console.log("Operação inválida")
-    }
+// selecionar por ID
+function puxarElementoPorId() {
+    const subtitulo = document.getElementById('subtitulo');
+    return console.log(subtitulo);
 }
 
-console.log(calculadora(10, 20, 'soma'));
-console.log(calculadora(10, 20, 'subtracao'));
-console.log(calculadora(10, 20, 'multiplicação'));
-console.log(calculadora(10, 20, 'divisao'));
+puxarElementoporId();
+
+// selecionar por classe
+function puxarElementoPorClasse() {
+    const titulo = document.getElementsByClassName('titulo');
+    return console.log(titulo);
+}
+
+puxarElementoPorClasse();
+
+//selecionar por tag
+function puxarElementoPorTag() {
+    const tags = document.getElementsByTagName('p');
+    return console.log(tags);
+}
+
+puxarElementoPorTag();
+
+// função para modificar o texto
+function setText() {
+    const subtitulo = document.getElementById('meuTitulo');
+    subtitulo.textContent = "Agora vai";
+}
