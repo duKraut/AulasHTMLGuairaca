@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Aula JS - seletor de Elementos</title>
         <meta charset="UTF-8">
-        <script src="script.js"></script>
+        <title> Aula Formulário - JS</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1 class="titulo">
-            Este é um H1
-        </h1>
-        <h2 id="subtitulo"> 
-            Este é um H2
-        </h2>
-        <p>
-            Este é um parágrafo
-        </p>
-        <h1 id="meuTitulo">Texto a ser Alterado</h1>
-        <button onclick="setText()">
-            Mudar o texto
-        </button>
+        <h2>Formulário de contrato</h2>
+
+        <form id="contact-form">
+            <label for="name">Nome: </label>
+            <input type="text" id="name" name="name" required>
+
+            <br>
+            
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+
+            <textarea id="message" name="message" required>
+            </textarea>
+
+            <button type="submit">Enviar</button>
+            <script rel="stylesheet" src="script.js"></script>
+        </form>
     </body>
 </html>

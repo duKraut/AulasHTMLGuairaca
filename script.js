@@ -1,29 +1,16 @@
-// selecionar por ID
-function puxarElementoPorId() {
-    const subtitulo = document.getElementById('subtitulo');
-    return console.log(subtitulo);
-}
+document.getElementById("contact-form").addEventListener(
+    "submit", function(event) {
+        event.preventDefault();
+        console.log(event);
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-puxarElementoporId();
-
-// selecionar por classe
-function puxarElementoPorClasse() {
-    const titulo = document.getElementsByClassName('titulo');
-    return console.log(titulo);
-}
-
-puxarElementoPorClasse();
-
-//selecionar por tag
-function puxarElementoPorTag() {
-    const tags = document.getElementsByTagName('p');
-    return console.log(tags);
-}
-
-puxarElementoPorTag();
-
-// função para modificar o texto
-function setText() {
-    const subtitulo = document.getElementById('meuTitulo');
-    subtitulo.textContent = "Agora vai";
-}
+        const mailtolink = 
+        `mailto:${email}?
+        subject=${encodeURIComponent('Assunto Reunião')}
+        &body=${encodeURIComponent(message)}`;
+        
+        window.location.href = mailtolink;
+    }
+);
