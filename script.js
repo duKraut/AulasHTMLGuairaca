@@ -1,36 +1,26 @@
-let arrayPokemons;
+let arrayRickandmorty;
 
-function getPokemon() {
-    fetch(
-        "https://pokeapi.co/api/v2/pokemon",
-        {
-            method: "GET"
-        }
-    )
-    .then((response) => response.json())
-    .then((data) => {
-        arrayPokemons = data.results;
-        appendData(arrayPokemons)
+function getRickandmorty() {
+    fetch('https://rickandmortyapi.com/api/character/?page=19')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('character-container');
+        data.results.forEach(character => {
+            const characterCard = document.createElement('div');
+            characterCard.classList.add('character-card');
+            
+            characterCard.innerHTML = `
+                <img src="${character.image}" alt="${character.name}">
+                <h2>${character.name}</h2>
+                <p>Status: ${character.status}</p>
+                <p>Species: ${character.species} ${character.type ? `- ${character.type}` : ''}</p>
+                <p>Origin: ${character.origin.name}</p>
+                <p>Location: ${character.location.name}</p>
+            `;
+            container.appendChild(characterCard);
+        });
     })
-    .catch((error) => {
-        console.error("Erro", error);
-    })
+    .catch(error => console.error('Error:', error));
 }
 
-function appendData(pokemons) {
-    let place = document.querySelector("#data-output");
-    let output = "";
-
-    for (let pokemon of pokemons) {
-        output += `
-            <tr>
-                <td>${pokemon.name}</td>
-                <td>${pokemon.url}</td>
-            </tr>
-        `
-    }
-    
-    place.innerHTML = output;
-}
-
-getPokemon();
+document.addEventListener('DOMContentLoaded', getRickandmorty);

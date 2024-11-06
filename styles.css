@@ -1,4 +1,65 @@
 body {
-    background-color:black;
-    color: white;
+    font-family: JetBrains Mono;
+    background-color: rgb(70, 156, 70);
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+} 
+
+header {
+    position:fixed;
+    top: 0;
+    background-color: rgb(73, 40, 30);
+    color: aliceblue;
+    text-align: center;
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+    padding-top: 22px;
+    font-size: 30px;
+}
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.character-card {
+    background-color: rgb(73, 40, 30);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.character-card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .character-card {
+        max-width: 100%;
+    }
 }
